@@ -3,51 +3,28 @@
 Password Strength Scoring: Machine Learning Approach
 This repository contains a Google Colab notebook (Password_Scoring.ipynb) that implements a machine learning solution for classifying the strength of passwords. The project explores various feature engineering techniques, feature selection methods, and machine learning models (Random Forest, SVM, Logistic Regression, and CNN) to accurately predict whether a given password is weak, medium, or strong.
 
-Table of Contents
-Project Overview
-
-Dataset
-
-Installation and Setup
-
-Feature Engineering
-
-Feature Selection
-
-Models Trained
-
-Evaluation Metrics
-
-Results
-
-How to Run the Notebook
-
-Contributing
-
-License
-
 Project Overview
 The goal of this project is to develop a robust system for password strength classification. This is crucial for enhancing cybersecurity by providing real-time feedback on password quality and identifying potential vulnerabilities. The notebook covers:
 
-Data Loading and Preprocessing: Handling a large dataset of passwords and their pre-assigned strengths.
+1. Data Loading and Preprocessing: Handling a large dataset of passwords and their pre-assigned strengths.
 
-Feature Engineering: Creating insightful features from raw passwords such as length, character types (digits, uppercase, lowercase, special characters), character variety, entropy, and pattern detection.
+2. Feature Engineering: Creating insightful features from raw passwords such as length, character types (digits, uppercase, lowercase, special characters), character variety, entropy, and pattern detection.
 
-Feature Selection: Utilizing various methods like Mutual Information, Correlation Matrix, SelectKBest (ANOVA F-value), and Recursive Feature Elimination (RFE) to identify the most impactful features for classification.
+3. Feature Selection: Utilizing various methods like Mutual Information, Correlation Matrix, SelectKBest (ANOVA F-value), and Recursive Feature Elimination (RFE) to identify the most impactful features for classification.
 
-Model Training: Implementing and training different machine learning models, including:
+4. Model Training: Implementing and training different machine learning models, including:
 
-Random Forest Classifier
+- Random Forest Classifier
 
-Support Vector Machine (SVM)
+- Support Vector Machine (SVM)
 
-Logistic Regression
+- Logistic Regression
 
-Convolutional Neural Network (CNN)
+- Convolutional Neural Network (CNN)
 
-Model Evaluation: Assessing model performance using standard metrics like accuracy, precision, recall, F1-score, confusion matrices, ROC curves, and Precision-Recall curves.
+5. Model Evaluation: Assessing model performance using standard metrics like accuracy, precision, recall, F1-score, confusion matrices, ROC curves, and Precision-Recall curves.
 
-Hyperparameter Tuning: Employing techniques like GridSearchCV and RandomizedSearchCV (with SMOTE for imbalance handling) to optimize model parameters.
+6. Hyperparameter Tuning: Employing techniques like GridSearchCV and RandomizedSearchCV (with SMOTE for imbalance handling) to optimize model parameters.
 
 Dataset
 The dataset used for this project is sourced from Kaggle:
@@ -61,15 +38,15 @@ This project is designed to run on Google Colab, so most dependencies are pre-in
 
 To get started:
 
-Open the Colab Notebook: Navigate to Password_Scoring.ipynb in this repository and open it in Google Colab.
+1. Open the Colab Notebook: Navigate to Password_Scoring.ipynb in this repository and open it in Google Colab.
 
-Install Dependencies: The first cells in the notebook will install necessary libraries such as opendatasets and tensorflow.
+2. Install Dependencies: The first cells in the notebook will install necessary libraries such as opendatasets and tensorflow.
 
 !pip install opendatasets
 !pip install tensorflow
 !pip install imblearn # For SMOTE
 
-Kaggle Credentials: To download the dataset, you will need to provide your Kaggle username and API key when prompted by opendatasets.download(). Follow the instructions provided by http://bit.ly/kaggle-creds to obtain your key.
+3. Kaggle Credentials: To download the dataset, you will need to provide your Kaggle username and API key when prompted by opendatasets.download(). Follow the instructions provided by http://bit.ly/kaggle-creds to obtain your key.
 
 Feature Engineering
 Several features are engineered from the raw password strings to help the models learn patterns indicative of strength:
@@ -110,13 +87,13 @@ The selected features for model training often include: length, num_upper, char_
 Models Trained
 The project evaluates the performance of the following classification models:
 
-Random Forest Classifier: An ensemble learning method that builds multiple decision trees and merges their predictions to improve accuracy and control overfitting.
+1. Random Forest Classifier: An ensemble learning method that builds multiple decision trees and merges their predictions to improve accuracy and control overfitting.
 
-Support Vector Machine (SVM): A powerful model that finds an optimal hyperplane to separate data points into classes.
+2. Support Vector Machine (SVM): A powerful model that finds an optimal hyperplane to separate data points into classes.
 
-Logistic Regression: A linear model used for binary or multiclass classification.
+3. Logistic Regression: A linear model used for binary or multiclass classification.
 
-Convolutional Neural Network (CNN): A deep learning model specifically designed for sequence data (like text, treated as character sequences here) to capture local patterns.
+4. Convolutional Neural Network (CNN): A deep learning model specifically designed for sequence data (like text, treated as character sequences here) to capture local patterns.
 
 Evaluation Metrics
 The models are evaluated using a comprehensive set of metrics to provide a complete picture of their performance:
@@ -161,15 +138,15 @@ CNN
 Random Forest and SVM models demonstrated superior performance in terms of test accuracy compared to Logistic Regression and CNN for this specific dataset and feature set. Detailed classification reports and confusion matrices for each model are available in the notebook.
 
 How to Run the Notebook
-Clone the repository (or download the Password_Scoring.ipynb file).
+1. Clone the repository (or download the Password_Scoring.ipynb file).
 
-Open in Google Colab.
+2. Open in Google Colab.
 
-Run all cells sequentially (Runtime -> Run all).
+3. Run all cells sequentially (Runtime -> Run all).
 
-Provide Kaggle credentials when prompted for dataset download.
+4. Provide Kaggle credentials when prompted for dataset download.
 
-Observe the output, including data insights, feature engineering results, model training progress, and evaluation metrics.
+5. Observe the output, including data insights, feature engineering results, model training progress, and evaluation metrics.
 
 Contributing
 Feel free to fork this repository, make improvements, and submit pull requests. Any contributions, suggestions, or bug reports are welcome!
